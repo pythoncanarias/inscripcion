@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% load bootstrap3 %}
+
+{% block bootstrap3_content %}
+<h1>Formulario de inscripción para el pyDay Tenerife 2017</h1>
+<form method="POST" action="" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button type="submit" class="btn btn-primary">{% bootstrap_icon "star" %} Enviar</button>
+    {% endbuttons %}
+</form>
+{% endblock bootstrap3_content %}
+
